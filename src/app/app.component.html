@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="header">
+    <div class="header__title">_Technology Roster : Administration</div>
+  </div>
+
+  <fa-icon [icon]="faCoffee"></fa-icon>
+
+  <div [style.display]="techData.spinner" class="loading-overlay">
+      <fa-icon [icon]="faSpinner"></fa-icon>
+    </div>
+
+  <router-outlet></router-outlet>
+  
+  <!-- <app-add-form></app-add-form>
+  <app-delete-data></app-delete-data>
+  <app-edit-data></app-edit-data>
+  <main-page></main-page> -->
+  
+
+  <div class="footer">Web App powered by <a href="http://mean.io" target="_blank">MEAN Stack</a></div>
+</div>

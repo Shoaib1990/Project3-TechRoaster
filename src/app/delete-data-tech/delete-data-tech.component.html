@@ -1,0 +1,16 @@
+<div [hidden]= techData.deleteTechForm class="deleteData__tech">
+    <div class="deleteData__Confirmation">
+      Are you sure you want to delete the follow technology?
+    </div>
+    <div class="deleteData__techName">
+      <!-- {{techData.techIdAction}} -->
+      {{techData.techNameAction}}
+    </div>
+    <br>
+    <div class="deleteData__btn">
+        <button class="deleteData__btn--style" [routerLink]="['/main']" (click)=techData.deleteExistingTech(techData.techIdAction) type="submit">Yes</button>&nbsp;
+        <button class="deleteData__btn--style" [routerLink]="['/main']" type="submit">No</button>
+        
+    </div>
+  </div>
+

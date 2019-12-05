@@ -1,0 +1,56 @@
+.editData h3, .editTechnology h3 {
+    padding: 5px 0px 5px 0px;
+}
+
+.editCourse__code div, .editCourse__name div, .editCourse__btn {
+    padding: 5px 0px 5px 0px;
+ 
+}
+
+input.editCourse__btn--style {
+    margin-right: 5px;
+    background-color: #f1eeee;
+    color: #616161;
+    border-radius: 5px;
+}
+
+div.editTechnology__name--title, div.editTechnology__description--title, div.editTechnology__difficulty--title {
+    padding-bottom: 10px;
+}
+
+input.editTechnology__name--input, input.editCourse__code--input, input.editCourse__name--input {
+    width: 150px;
+    border-radius: 5px;
+    border: rgb(143, 145, 145) 1px solid;
+}
+
+input.editCourse__name--input {
+    width: 200px;
+}
+
+textarea.editTechnology__description--textArea {
+    width: 200px;
+    border-radius: 10px;
+    border: rgb(143, 145, 145) 1px solid;
+}
+
+
+
+select.editTechnology__difficulty--input {
+    width: 50px;
+    border-radius: 5px;
+    border: rgb(143, 145, 145) 1px solid;
+}
+
+select.editTechnology__difficulty--input {
+    width: 50px;
+    border-radius: 5px;
+    border: rgb(143, 145, 145) 1px solid;
+}
+
+input.editTech__btn--style {
+    margin-right: 5px;
+    background-color: #f1eeee;
+    color: #616161;
+    border-radius: 5px;
+}

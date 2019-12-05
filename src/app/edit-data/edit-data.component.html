@@ -1,0 +1,24 @@
+<div class="editData">
+  <div  class="editData__course">
+
+    <form>
+
+        <h3>Edit Course:</h3>
+        <div class="editCourse__code">
+          <div>Course Code:</div>
+          <input name="courseCode" class="editCourse__code--input"type="text" value={{techData.courseCodeAction}} disabled/>
+        </div>
+        <div class="editCourse__name">
+          <div>Course Name:</div>
+          <input name="courseName" class="editCourse__name--input" type="text" [(ngModel)]="techData.courseNameAction" value={{techData.courseNameAction}} required/>
+        </div>
+        <div class="editCourse__btn">
+            
+          <input type="submit" value="Submit" class="editCourse__btn--style" (click)="editOldCourseData(techData.courseIdAction,techData.courseCodeAction,techData.courseNameAction)" [routerLink]="['/main']" />
+          <input class="editCourse__btn--style" [routerLink]="['/main']" type="submit" value="Cancel"/>
+        </div>
+
+    </form>
+
+  </div>
+

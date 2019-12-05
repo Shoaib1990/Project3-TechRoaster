@@ -1,0 +1,52 @@
+@import "./../../globals";
+
+.addCourse h3, .addTechnology h3 {
+    padding: 5px 0px 5px 0px;
+}
+
+.addCourse__code div, .addCourse__name div, .addCourse__btn{
+    margin: 5px 0px 5px 0px;
+ 
+}
+
+div.addTechnology__name--title, div.addTechnology__description--title, div.addTechnology__difficulty--title, div.addCourse__button {
+    padding-bottom: 10px;
+}
+
+ 
+input.addTechnology__name--input, input.addCourse__code--input, input.addCourse__name--input {
+    width: 150px;
+    border-radius: 5px;
+    border: rgb(143, 145, 145) 1px solid;
+}
+
+input.addCourse__name--input {
+    width: 200px;
+}
+
+textarea.addTechnology__description--textArea {
+    width: 200px;
+    border-radius: 10px;
+    border: rgb(143, 145, 145) 1px solid;
+}
+
+
+
+select.addTechnology__difficulty--input {
+    width: 50px;
+    border-radius: 5px;
+    border: rgb(143, 145, 145) 1px solid;
+}
+
+select.addTechnology__difficulty--input {
+    width: 50px;
+    border-radius: 5px;
+    border: rgb(143, 145, 145) 1px solid;
+}
+
+input.addCourse__btn--style {
+    margin-right: 5px;
+    background-color: #f1eeee;
+    color: #616161;
+    border-radius: 5px;
+}

@@ -1,0 +1,47 @@
+<div class="addTechnology">
+    <div class="addTechnology__Body">
+      <h3>Add New Technology:</h3>
+  
+          <div class="addTechnology__name">
+              <div class="addTechnology__name--title">Technology Name:</div>
+              <input class="addTechnology__name--input" [(ngModel)]="addingTechForm.name" type="text" maxlength="50" required/>
+          </div> 
+          <br> 
+          <div class="addTechnology__description">   
+              <div class="addTechnology__description--title">Description:</div>
+              <textarea class="addTechnology__description--textArea" [(ngModel)]="addingTechForm.description" cols="15" rows="5" maxlength="200" required></textarea>
+          </div>
+          <br> 
+          <div class="addTechnology__difficulty">   
+              <div class="addTechnology__difficulty--title">Difficulty:</div>
+              
+                <select  class="addTechnology__difficulty--input" [(ngModel)]="addingTechForm.difficulty">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+          </div>
+          <br> 
+          <p>Used in courses</p>
+    
+          <div class="addTechnology__checkbox">   
+              <div *ngFor="let course of techData.jsonCourseData">
+                  
+                <!-- <input [(ngModel)]="addingTechForm.courses" type="checkbox" value="course"/>{{course.name}} -->
+                <input (click)="addToArray(course.code, course.name, $event)" type="checkbox" value="course"/>{{course.name}} {{course.code}}
+                    
+              </div>
+          </div>
+          <br>       
+          
+          <div class="addTechnology__button">   
+              <br>
+              <input class="addCourse__btn--style" (click)="storeNewTechData()" [routerLink]="['/main']" type="submit" value="Submit"/>&nbsp;
+              <input class="addCourse__btn--style" [routerLink]="['/main']" type="submit" value="Cancel"/>
+          </div>
+    </div>
+  
+  </div>
+  

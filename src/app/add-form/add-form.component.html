@@ -1,0 +1,30 @@
+<div class="addCourse">
+  <div class="addCourse__Body">
+      <h3>Add New Course:</h3>
+      
+      <form>
+
+          <div class="addCourse__code">
+              <div>Course Code:</div>
+              <input name="courseCode" class="addCourse__code--input" type="text" [(ngModel)]="addingCourseForm.code" required/>
+          </div> 
+       
+          <div class="addCourse__name">   
+              <div>Course Name:</div>
+              <input name="courseName" class="addCourse__name--input" type="text" [(ngModel)]="addingCourseForm.name" required/>
+          </div>
+          <br>
+          <div class="addCourse__button">   
+      
+              <input class="addCourse__btn--style" (click)="storeNewCourseData()" type="submit" value="Submit" [routerLink]="['/main']" />&nbsp;
+              <input class="addCourse__btn--style" [routerLink]="['/main']" type="submit" value="Cancel"/>
+          </div>
+
+      </form>
+
+
+
+  </div>
+
+</div>
+

@@ -1,0 +1,18 @@
+@import "./../../globals";
+
+.deleteIcon:hover, .editIcon:hover, .addIcon:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.technologiesList, .coursesList {
+    min-width: 250px;
+    
+}

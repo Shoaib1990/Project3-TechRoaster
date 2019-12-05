@@ -1,0 +1,69 @@
+<div class="editData__tech">
+  <div class="editTechnology__Body">
+    <h3>Edit Technology:</h3>
+    <div class="editTechnology__name">
+      <div class="editTechnology__name--title">Technology Name:</div>
+      <input
+        class="editTechnology__name--input"
+        type="text"
+        maxlength="50"
+        [(ngModel)]="techData.techNameAction"
+        value="{{ techData.techNameAction }}"
+        required />
+    </div>
+    <br />
+    <div class="editTechnology__description">
+      <div class="editTechnology__description--title">Description:</div>
+      <textarea
+        class="editTechnology__description--textArea"
+        cols="15"
+        rows="5"
+        maxlength="200"
+        [(ngModel)]="techData.techDescriptionAction"
+        value="{{ techData.techDescriptionAction }}"
+        required
+      ></textarea>
+    </div>
+    <div class="editTechnology__difficulty">
+      <div class="editTechnology__difficulty--title">Difficulty:</div>
+
+      <select class="editTechnology__difficulty--input" [(ngModel)]="techData.techDifficultyAction">
+        <!-- <option value="{{ techData.techDifficultyAction }}" selected>{{
+          techData.techDifficultyAction
+        }}</option> -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <p>Used in courses</p>
+
+    
+
+    <div class="editTechnology__checkbox">
+    
+
+      <div *ngFor="let course of techData.techCoursesAction">
+        <input
+          class="editTechnology__difficulty--input"
+          type="checkbox"
+          [checked]="course.selected"
+        />{{ course.name }}
+      </div>
+
+      <div class="editTechnology__button">
+        <br />
+        <!-- <input class="editTech__btn--style" [routerLink]="['/main']" type="submit" value="Submit" (click) = "techData.confirmEditTech()" />&nbsp; -->
+        <input class="editTech__btn--style" [routerLink]="['/main']" type="submit" value="Submit" (click) = "editOldTechDataComp(techData.techIdAction,techData.techNameAction,techData.techDescriptionAction,techData.techDifficultyAction, techData.techCoursesAction)" />&nbsp;
+        <input
+          class="editTech__btn--style"
+          [routerLink]="['/main']"
+          type="submit"
+          value="Cancel"
+        />
+      </div>
+    </div>
+  </div>
+</div>

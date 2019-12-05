@@ -1,0 +1,16 @@
+<br>
+<div class="deleteData">
+  <div class="deleteData__Course">
+    <div class="deleteData__Confirmation">
+      Are you sure you want to delete the follow course?
+    </div>
+    <div class="deleteData__CourseName">
+      {{techData.courseCodeAction}}: {{techData.courseNameAction}}
+    </div>
+    <br>
+    <div class="deleteData__btn">
+        <button class="deleteData__btn--style" (click) = techData.deleteExistingCourse(techData.courseIdAction) type="submit" [routerLink]="['/main']" >Yes</button>&nbsp;
+        <button class="deleteData__btn--style" [routerLink]="['/main']" type="submit">No</button>
+    </div>
+  </div>
+  <br>

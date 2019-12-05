@@ -1,0 +1,41 @@
+<div class="main">
+  <div class="technologiesList">
+    <h3>
+      Technologies
+    </h3>
+    
+    <div [routerLink]="['/addTech']"  class="addIcon"><fa-icon [icon]="faPlus"></fa-icon></div>
+    <div *ngFor="let item of techData.jsonTechData">
+      <div>
+        <span [routerLink]="['/editTech']" (click)="techData.techEditForm(item._id, item.name, item.description, item.difficulty, item.courses)" class="editIcon"
+          ><fa-icon [icon]="faPencilAlt"></fa-icon></span
+        >&nbsp;
+        
+        <span [routerLink]="['/deleteTech']" (click)="techData.techDeleteForm(item._id,item.name)" class="deleteIcon"
+          ><fa-icon [icon]="faTrash"></fa-icon></span>&nbsp;
+        {{ item.name }}
+      </div>
+    </div>
+  </div>
+
+  <div class="coursesList">
+    <h3>
+      Courses
+    </h3>
+    <div [routerLink]="['/addCourse']" class="addIcon">
+      <fa-icon [icon]="faPlus"></fa-icon>
+    </div>
+    <div> 
+      <div *ngFor="let course of techData.jsonCourseData">
+        <div>
+          <span [routerLink]="['/editCourse']" (click)="techData.courseEditForm(course._id,course.code, course.name)" class="editIcon"
+            ><fa-icon [icon]="faPencilAlt"></fa-icon></span>&nbsp;
+          <span [routerLink]="['/deleteCourse']" (click)="techData.courseDeleteForm(course._id,course.code, course.name)" class="deleteIcon"
+            ><fa-icon [icon]="faTrash"></fa-icon></span>&nbsp;
+            {{course.name}}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
